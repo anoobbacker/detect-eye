@@ -107,13 +107,13 @@ android {
             if (nativeBuildSystem == 'bazel' || nativeBuildSystem == 'makefile') {
                 // TensorFlow Java API sources.
                 java {
-                    srcDir '../../java/src/main/java'
-                    exclude '**/examples/**'
+                    srcDir 'src/main/java'
+                    exclude ''
                 }
 
                 // Android TensorFlow wrappers, etc.
                 java {
-                    srcDir '../../contrib/android/java'
+                    srcDir 'contrib/android/java'
                 }
             }
             // Android demo app sources.
