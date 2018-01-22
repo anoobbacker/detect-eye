@@ -89,7 +89,7 @@ public abstract class CameraActivity extends Activity
     super.onCreate(null);
     getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-    setContentView(org.tensorflow.detecteye.R.layout.activity_camera);
+    setContentView(app.detecteye.R.layout.activity_camera);
 
     this.textToSpeechEngine = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
         @Override
@@ -102,8 +102,8 @@ public abstract class CameraActivity extends Activity
 
 
     //set vibrate button sizes.
-    vibrateButton = (ToggleButton) findViewById(org.tensorflow.detecteye.R.id.vibrateButton);
-    narrateButton = (ToggleButton) findViewById(org.tensorflow.detecteye.R.id.narrateButton);
+    vibrateButton = (ToggleButton) findViewById(app.detecteye.R.id.vibrateButton);
+    narrateButton = (ToggleButton) findViewById(app.detecteye.R.id.narrateButton);
 
     this.reader = new WordReader(textToSpeechEngine,  DEFAULT_FEEDBACKMODE, getApplicationContext(), LOGGER);
     this.reader.start();
@@ -408,7 +408,7 @@ public abstract class CameraActivity extends Activity
 
     getFragmentManager()
         .beginTransaction()
-        .replace(org.tensorflow.detecteye.R.id.container, fragment)
+        .replace(app.detecteye.R.id.container, fragment)
         .commit();
   }
 
@@ -430,14 +430,14 @@ public abstract class CameraActivity extends Activity
   }
 
   public void requestRender() {
-    final OverlayView overlay = (OverlayView) findViewById(org.tensorflow.detecteye.R.id.debug_overlay);
+    final OverlayView overlay = (OverlayView) findViewById(app.detecteye.R.id.debug_overlay);
     if (overlay != null) {
       overlay.postInvalidate();
     }
   }
 
   public void addCallback(final OverlayView.DrawCallback callback) {
-    final OverlayView overlay = (OverlayView) findViewById(org.tensorflow.detecteye.R.id.debug_overlay);
+    final OverlayView overlay = (OverlayView) findViewById(app.detecteye.R.id.debug_overlay);
     if (overlay != null) {
       overlay.addCallback(callback);
     }

@@ -335,7 +335,7 @@ public class CameraConnectionFragment extends Fragment {
 
   @Override
   public void onViewCreated(final View view, final Bundle savedInstanceState) {
-    textureView = (AutoFitTextureView) view.findViewById(org.tensorflow.detecteye.R.id.texture);
+    textureView = (AutoFitTextureView) view.findViewById(app.detecteye.R.id.texture);
   }
 
   @Override
@@ -412,9 +412,9 @@ public class CameraConnectionFragment extends Fragment {
       // device this code runs.
       // TODO(andrewharp): abstract ErrorDialog/RuntimeException handling out into new method and
       // reuse throughout app.
-      ErrorDialog.newInstance(getString(org.tensorflow.detecteye.R.string.camera_error))
+      ErrorDialog.newInstance(getString(app.detecteye.R.string.camera_error))
               .show(getChildFragmentManager(), FRAGMENT_DIALOG);
-      throw new RuntimeException(getString(org.tensorflow.detecteye.R.string.camera_error));
+      throw new RuntimeException(getString(app.detecteye.R.string.camera_error));
     }
 
     cameraConnectionCallback.onPreviewSizeChosen(previewSize, sensorOrientation);

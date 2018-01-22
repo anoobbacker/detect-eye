@@ -16,7 +16,7 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.tensorflow.demo_internal">
+    package="app.detecteye">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" />
@@ -33,7 +33,7 @@
         android:icon="@drawable/ic_launcher"
         android:theme="@style/MaterialTheme">
 
-        <activity android:name="org.tensorflow.detecteye.ClassifierActivity"
+        <activity android:name="app.detecteye.ClassifierActivity"
                   android:screenOrientation="portrait"
                   android:label="@string/activity_name_classification">
             <intent-filter>
@@ -45,15 +45,6 @@
         <activity android:name="app.detecteye.DetectorActivity"
                   android:screenOrientation="portrait"
                   android:label="@string/activity_name_detection">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name="org.tensorflow.detecteye.StylizeActivity"
-                  android:screenOrientation="portrait"
-                  android:label="@string/activity_name_stylize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

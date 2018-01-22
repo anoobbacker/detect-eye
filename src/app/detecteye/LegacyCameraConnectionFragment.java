@@ -141,7 +141,7 @@ public class LegacyCameraConnectionFragment extends Fragment {
 
   @Override
   public void onViewCreated(final View view, final Bundle savedInstanceState) {
-    textureView = (AutoFitTextureView) view.findViewById(org.tensorflow.detecteye.R.id.texture);
+    textureView = (AutoFitTextureView) view.findViewById(app.detecteye.R.id.texture);
   }
 
   @Override

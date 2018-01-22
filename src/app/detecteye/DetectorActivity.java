@@ -196,7 +196,7 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
     cropToFrameTransform = new Matrix();
     frameToCropTransform.invert(cropToFrameTransform);
 
-    trackingOverlay = (OverlayView) findViewById(org.tensorflow.detecteye.R.id.tracking_overlay);
+    trackingOverlay = (OverlayView) findViewById(app.detecteye.R.id.tracking_overlay);
     trackingOverlay.addCallback(
         new OverlayView.DrawCallback() {
           @Override
@@ -358,7 +358,7 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
 
   @Override
   protected int getLayoutId() {
-    return org.tensorflow.detecteye.R.layout.camera_connection_fragment_tracking;
+    return app.detecteye.R.layout.camera_connection_fragment_tracking;
   }
 
   @Override
