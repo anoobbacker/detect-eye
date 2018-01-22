@@ -378,7 +378,7 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
       this.reader.stopMe();
       this.reader.join();
     } catch (InterruptedException e) {
-      LOGGER.i("Error: %s", e.getStackTrace());
+      LOGGER.i("Error: " + e.getStackTrace());
     }
 
     super.onDestroy();
